@@ -1,3 +1,4 @@
+// TODO: Remove unneeded requirements
 var gulp = require('gulp');
 var browserify = require('browserify');
 var babelify = require('babelify');
@@ -27,7 +28,7 @@ gulp.task('sass', function() {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch(stylesDir + '/*.scss', ['sass']);
+  gulp.watch(stylesDir + '/**/*.scss', ['sass']);
 });
 
 gulp.task('clean:sass', function() {
@@ -35,7 +36,7 @@ gulp.task('clean:sass', function() {
 	return del('src/styles/app.css');
 });
 
-
+// TODO: Minify js if needed
 gulp.task('js', ['clean:js'], function() {
 
 });
@@ -55,7 +56,12 @@ gulp.task('serve', function() {
 	gutil.log('Running server');
 	gulp.src('build')
 	.pipe(webserver({
-	  livereload: true,
+	  livereload: {
+	  	enable: true,
+        filter: function(fileName) {
+        	return true;
+        }
+      },
 	  open: true
 	}));
 });
@@ -66,10 +72,10 @@ gulp.task('clean:build', function() {
 });
 
 // Compile assets
-gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'serve')
+gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'serve', 'sass:watch')
 );
 
 // The default task (called when we run `gulp` from cli)
-gulp.task('default', [], function() {
+gulp.task('default', ['build'], function() {
 	gutil.log('In default callback');
 });
