@@ -1,0 +1,49 @@
+section[data-section-type="cta"] {
+	background-color: $dark-green;
+	color: $white;
+
+	div {
+		height: 100%;
+		padding: 0px 200px;
+	}
+
+	$button-width: 190px;
+
+	p {
+		// Need to add this margin: 0 to make sure the preceding div gets properly placed
+		// Would usually use something like normalize.css to fix stuff like this
+		margin: 0;
+
+		display: inline-block;
+		vertical-align: top;
+
+		font-size: 1.2em;
+		padding: 47px 0px;
+
+		// Div width - padding - button width - margin
+		width: 1265 - 400 - $button-width - 30;
+	}
+
+	a {
+		background-color: $light-blue;
+		@include montserratFont();
+		font-size: 1.8em;
+
+		width: $button-width;
+		height: 63px;
+
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+
+		margin-left: 30px;
+		margin-top: 110px;
+		padding: 20px 0px;
+
+		text-transform: uppercase;
+
+		border-radius: 5px;
+		cursor: pointer;
+
+	}
+}

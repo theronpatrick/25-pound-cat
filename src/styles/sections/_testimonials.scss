@@ -3,7 +3,8 @@ div[data-section-type="testimonial"] {
 
 	// TODO: See if we can get vertical aligning working without table-cell
 	div {
-		padding: 80px 20px;
+		height: 100%;
+		padding: 40px 20px;
 		text-align: center;
 	}
 
@@ -19,8 +20,8 @@ div[data-section-type="testimonial"] {
 		// Only resorting to CSS selector because I can't add a <img> tag to source file
 		&:before {
 			position: absolute;
-			top: 60px;
-			margin-left: -33px;
+			top: 26px;
+			margin-left: -40px;
 
 			content: url("img/testimonial-flair.png");
 		}

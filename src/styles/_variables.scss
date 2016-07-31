@@ -1,5 +1,8 @@
 // Colors
 $light-gray: #f9f8f7;
+$dark-green: #0f434c;
+$white: #ffffff;
+$light-blue: #1da1db;
 
 // Fonts
 // TODO: Put in own file if needed
@@ -10,4 +13,11 @@ $light-gray: #f9f8f7;
 @mixin montserratFont() {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
+}
+
+
+@mixin breakpoint($point) {
+   @if $point == mobile {
+     @media (min-width: 375px) { @content ; }
+  }
 }

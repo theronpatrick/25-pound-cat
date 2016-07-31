@@ -37,15 +37,25 @@ gulp.task('clean:sass', function() {
 });
 
 // TODO: Minify js if needed
-gulp.task('js', ['clean:js'], function() {
+gulp.task('js', function() {
+	return gulp.src("src/js/**/*")
+	.pipe(gulp.dest("build/js/"));
+});
 
+gulp.task('img', function() {
+	gutil.log('In img');
+	return gulp.src("src/img/**/*")
+	.pipe(gulp.dest("build/img/"));
 });
 
 // TODO: Get EJS to live reload
 gulp.task('ejs', function() {
 	gutil.log('Building ejs files');
 	gulp.src("src/views/pages/index.ejs")
-	.pipe(ejs({title:"test"}))
+	.pipe(ejs({
+		title: "IOMGDb",
+		rmWhitespace: true
+	}))
 	.pipe(rename("index.html"))
     .pipe(gulp.dest("build"));
 
@@ -73,7 +83,7 @@ gulp.task('clean:build', function() {
 });
 
 // Compile assets
-gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'serve', 'sass:watch')
+gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'img', 'js', 'serve', 'sass:watch')
 );
 
 // The default task (called when we run `gulp` from cli)
