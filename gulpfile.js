@@ -27,8 +27,10 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest("build"));
 });
  
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
   gulp.watch(stylesDir + '/**/*.scss', ['sass']);
+  gulp.watch('src/**/*.js', ['js']);
+  gulp.watch('src/**/*.ejs', ['ejs']);
 });
 
 gulp.task('clean:sass', function() {
@@ -83,7 +85,7 @@ gulp.task('clean:build', function() {
 });
 
 // Compile assets
-gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'img', 'js', 'serve', 'sass:watch')
+gulp.task('build', gulpSequence('clean:build', 'ejs', 'sass', 'img', 'js', 'serve', 'watch')
 );
 
 // The default task (called when we run `gulp` from cli)
