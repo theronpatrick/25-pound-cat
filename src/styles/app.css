@@ -1,2 +1,36 @@
-.test .tester {
-  color: yellow; }
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300; }
+
+p, span {
+  font-size: 1.8em; }
+
+section, div[data-section-type="testimonial"] {
+  min-height: 300px; }
+
+div[data-section-type="testimonial"] {
+  background-color: #f9f8f7; }
+  div[data-section-type="testimonial"] div {
+    padding: 80px 20px;
+    text-align: center; }
+  div[data-section-type="testimonial"] p, div[data-section-type="testimonial"] span {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: left; }
+  div[data-section-type="testimonial"] p:before {
+    position: absolute;
+    top: 60px;
+    margin-left: -33px;
+    content: url("img/testimonial-flair.png"); }
+  div[data-section-type="testimonial"] span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.4em; }

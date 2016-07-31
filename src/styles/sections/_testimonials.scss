@@ -1,5 +1,33 @@
 div[data-section-type="testimonial"] {
-	background-color: purple;
+	background-color: $light-gray;
 
-	height: 100px;
+	// TODO: See if we can get vertical aligning working without table-cell
+	div {
+		padding: 80px 20px;
+		text-align: center;
+	}
+
+	// Align both p and span
+	p, span {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+
+		text-align: left;
+	}
+	p {
+		// Only resorting to CSS selector because I can't add a <img> tag to source file
+		&:before {
+			position: absolute;
+			top: 60px;
+			margin-left: -33px;
+
+			content: url("img/testimonial-flair.png");
+		}
+	}
+	span {
+		@include montserratFont;
+		font-size: 1.4em;
+	}
+
 }

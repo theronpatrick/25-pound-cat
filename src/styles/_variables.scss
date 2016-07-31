@@ -1,0 +1,13 @@
+// Colors
+$light-gray: #f9f8f7;
+
+// Fonts
+// TODO: Put in own file if needed
+@mixin robotoFont() {
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 300;
+}
+@mixin montserratFont() {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+}

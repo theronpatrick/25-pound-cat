@@ -41,6 +41,7 @@ gulp.task('js', ['clean:js'], function() {
 
 });
 
+// TODO: Get EJS to live reload
 gulp.task('ejs', function() {
 	gutil.log('Building ejs files');
 	gulp.src("src/views/pages/index.ejs")

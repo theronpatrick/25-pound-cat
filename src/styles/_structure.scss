@@ -1,6 +1,21 @@
-.test {
-	.tester {
-		// Just testing to make sure things go through for now
-		color: orange;
-	}
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+// Use box sizing on everything
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	@include robotoFont;
+}
+p, span {
+	font-size: 1.8em;
+}
+
+// Basic structure blocks.  Need special div selector for testimonial since it's not
+// in a section
+section, div[data-section-type="testimonial"] {
+	min-height: 300px;
 }
