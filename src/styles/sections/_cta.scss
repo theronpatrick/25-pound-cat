@@ -1,4 +1,4 @@
-section[data-section-type="cta"] {
+[data-section-type="cta"] {
 	background-color: $dark-green;
 	color: $white;
 
@@ -10,8 +10,6 @@ section[data-section-type="cta"] {
 
 		@include inlineBlock;
 	}
-
-	$button-width: 190px;
 
 	p {
 		// Need to add this margin: 0 to make sure the preceding div gets properly placed
@@ -41,7 +39,7 @@ section[data-section-type="cta"] {
 			@include montserratFont();
 			font-size: 1.8em;
 
-			width: $button-width;
+			width: 190px;
 			height: 63px;
 
 			display: inline-block;

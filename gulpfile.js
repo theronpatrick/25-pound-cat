@@ -18,6 +18,9 @@ var gulpSequence = require("gulp-sequence");
 // Directory for styles
 var stylesDir = 'src/styles';
 
+// Movie data
+var movieData = require("./src/js/data/data.json");
+
 gulp.task('sass', function() {
 	gutil.log('Building styles');
 	return gulp.src(stylesDir + '/app.scss')
@@ -52,14 +55,16 @@ gulp.task('img', function() {
 
 // TODO: Get EJS to live reload
 gulp.task('ejs', function() {
+
 	gutil.log('Building ejs files');
 	gulp.src("src/views/pages/index.ejs")
 	.pipe(ejs({
 		title: "IOMGDb",
-		rmWhitespace: true
+		rmWhitespace: true,
+		movies: movieData.media
 	}))
 	.pipe(rename("index.html"))
-    .pipe(gulp.dest("build"));
+	.pipe(gulp.dest("build"));
 
 });
 
@@ -69,13 +74,13 @@ gulp.task('serve', function() {
 	gutil.log('Running server');
 	gulp.src('build')
 	.pipe(webserver({
-	  livereload: {
-	  	enable: true,
-        filter: function(fileName) {
-        	return true;
-        }
-      },
-	  open: true
+		livereload: {
+			enable: true,
+			filter: function(fileName) {
+				return true;
+			}
+	},
+		open: true
 	}));
 });
 

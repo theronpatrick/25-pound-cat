@@ -1,4 +1,4 @@
-<section>
+<section data-section-type="filterable-content">
 	<div>
 		<div>
 			<div>
@@ -32,11 +32,14 @@
 		</div>
 	</div>
 
-	<div>
-		<div>
-			<div>
-				<ul></ul>
+	
+	<div data-attribute="movie-container">
+		<% for (var i=0; i < movies.length; i++) {%>
+		<div data-attribute="movie-block">
+			<div data-attribute="movie-cover" style="background-image: url('<%= movies[i].poster %>')">
+				<ul data-attribute="movie-title"><%= movies[i].title %> (<%= movies[i].year %>) <br /> Genres: <% for (var j=0; j < movies[i].genre.length; j++){%> <%= movies[i].genre[j]%> <% } %></ul>
 			</div>
 		</div>
+		<% } %>
 	</div>
 </section>
