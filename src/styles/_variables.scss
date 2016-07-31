@@ -15,9 +15,16 @@ $light-blue: #1da1db;
 	font-weight: 300;
 }
 
+// Helpers
+// Some browsers act wonky if vertical-align isn't explictly set
+@mixin inlineBlock() {
+	display: inline-block;
+	vertical-align: top;
+}
+
 
 @mixin breakpoint($point) {
    @if $point == mobile {
-     @media (min-width: 375px) { @content ; }
+     @media (max-width: 415px) { @content ; }
   }
 }

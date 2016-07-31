@@ -2,9 +2,13 @@ section[data-section-type="cta"] {
 	background-color: $dark-green;
 	color: $white;
 
+	text-align: center;
+
 	div {
 		height: 100%;
-		padding: 0px 200px;
+		width: 100%;
+
+		@include inlineBlock;
 	}
 
 	$button-width: 190px;
@@ -14,36 +18,50 @@ section[data-section-type="cta"] {
 		// Would usually use something like normalize.css to fix stuff like this
 		margin: 0;
 
-		display: inline-block;
-		vertical-align: top;
+		min-height: 300px;
+		height: 100%;
+		width: 70%;
 
-		font-size: 1.2em;
 		padding: 47px 0px;
 
-		// Div width - padding - button width - margin
-		width: 1265 - 400 - $button-width - 30;
+		text-align: left;
+
+		// Not using mixin because we want to middle align
+		display: inline-block;
+		vertical-align: middle;
+
+		font-size: 1.2em;
+
 	}
 
 	a {
-		background-color: $light-blue;
-		@include montserratFont();
-		font-size: 1.8em;
+		// Would be preferable to add a class for this one if that was allowed
+		&:not(.poke-image) {
+			background-color: $light-blue;
+			@include montserratFont();
+			font-size: 1.8em;
 
-		width: $button-width;
-		height: 63px;
+			width: $button-width;
+			height: 63px;
 
-		display: inline-block;
-		vertical-align: middle;
-		text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
 
-		margin-left: 30px;
-		margin-top: 110px;
-		padding: 20px 0px;
+			margin: 20px 0px 20px 30px;
+			padding: 20px 0px;
 
-		text-transform: uppercase;
+			text-transform: uppercase;
 
-		border-radius: 5px;
-		cursor: pointer;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		// Poke-links after clicking 'more' button
+		&.poke-image {
+			color: $white;
+			font-size: 2.4em;
+		}
 
 	}
 }

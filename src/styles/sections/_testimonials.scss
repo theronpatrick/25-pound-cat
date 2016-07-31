@@ -6,15 +6,22 @@ div[data-section-type="testimonial"] {
 		height: 100%;
 		padding: 40px 20px;
 		text-align: center;
+
+		@include breakpoint(mobile) {
+			padding: 10px 5px;
+		}
 	}
 
 	// Align both p and span
 	p, span {
-		display: inline-block;
-		vertical-align: top;
+		@include inlineBlock;
 		width: 50%;
 
 		text-align: left;
+
+		@include breakpoint(mobile) {
+			width: 70%;
+		}
 	}
 	p {
 		// Only resorting to CSS selector because I can't add a <img> tag to source file
@@ -24,6 +31,11 @@ div[data-section-type="testimonial"] {
 			margin-left: -40px;
 
 			content: url("img/testimonial-flair.png");
+
+			@include breakpoint(mobile) {
+				margin: 0;
+				left: 10px;
+			}
 		}
 	}
 	span {

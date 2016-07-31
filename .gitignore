@@ -49,3 +49,4 @@ Temporary Items
 # Ignore node modules and build
 node_modules/
 build/
+src/styles/app.css

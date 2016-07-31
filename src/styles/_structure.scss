@@ -23,5 +23,5 @@ p, span {
 // Basic structure blocks.  Need special div selector for testimonial since it's not
 // in a section
 section, div[data-section-type="testimonial"] {
-	height: 300px;
+	min-height: 300px;
 }
