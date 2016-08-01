@@ -8,7 +8,7 @@
 						<div></div>
 					</div>
 					<div>
-						<span class="filter dropdown" role="button" tabindex="0">Year</span>
+						<span class="filter dropdown" role="button" tabindex="0" data-filter-type="year">Year</span>
 						<div></div>
 					</div>
 					<div class="filter search">
@@ -17,15 +17,15 @@
 				</div>
 				<div class="filter-bottom-row">
 					<div class="filter poster-type">
-						<input type="radio" name="poster-type" value="movies" id="radio-type-movies">
+						<input type="radio" name="poster-type" value="movie" id="radio-type-movies">
 						<label for="radio-type-movies">Movies</label>
 					</div>
 					<div class="filter poster-type">
-						<input type="radio" name="poster-type" value="books" id="radio-type-books">
+						<input type="radio" name="poster-type" value="book" id="radio-type-books">
 						<label for="radio-type-books">Books</label>
 					</div>
 					<div >
-						<a href="#" role="button" class="filter clear-button">Clear filters</a>
+						<a role="button" class="filter clear-button">Clear filters</a>
 					</div>
 				</div>
 			</div>
@@ -40,9 +40,9 @@
 			<div>
 				<ul>
 					<% for (var i=0; i < movies.length; i++) {%>
-					<div class="movie-block">
+					<div class="movie-block" data-media-type="<%= movies[i].type %>">
 						<img src=<%= movies[i].poster %>></img>
-						<div class="movie-title"><%= movies[i].title %> (<%= movies[i].year %>)</div>
+						<div class="movie-title"><%= movies[i].title %> <span class="movie-year">(<%= movies[i].year %>)</span></div>
 						<div class="movie-genres">Genres: 
 							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
 							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
