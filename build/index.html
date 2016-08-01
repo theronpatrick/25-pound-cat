@@ -53,157 +53,338 @@
 
 	
 	<div class="movie-container">
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SY1000_CR0,0,664,1000_AL_.jpg')">
-				<ul class="movie-title">Raiders of the Lost Ark (1981) <br /> Genres:  action  adventure </ul>
+		<div>
+			<!-- Went against the rules here and added/removed DOM elements, because I couldn't figure out how a ul
+			could be used without adding elements to it... -->
+			<div>
+				<ul>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SY1000_CR0,0,664,1000_AL_.jpg></img>
+						<div class="movie-title">Raiders of the Lost Ark (1981)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Adventure 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTc0NDQzNTA2Ml5BMl5BanBnXkFtZTcwNzI2OTQzMw@@._V1_.jpg></img>
+						<div class="movie-title">The Other Guys (2010)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Comedy, 
+															Crime 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg></img>
+						<div class="movie-title">Jurassic Park (1993)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															Sci-fi, 
+															Thriller 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BOTIyMDY2NGQtOGJjNi00OTk4LWFhMDgtYmE3M2NiYzM0YTVmXkEyXkFqcGdeQXVyNTU1NTcwOTk@._V1_SY1000_CR0,0,654,1000_AL_.jpg></img>
+						<div class="movie-title">Star Wars: A New Hope (1977)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Adventure, 
+															Fantasy 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTI2ODMzODA0Ml5BMl5BanBnXkFtZTYwNTM3NzY5._V1._CR17,27,308,447_.jpg></img>
+						<div class="movie-title">Predator (1987)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Adventure, 
+															Sci-fi 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTcyMzQ0MjQ5MF5BMl5BanBnXkFtZTYwOTczNjA5._V1_.jpg></img>
+						<div class="movie-title">Blazing Saddles (1974)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Comedy, 
+															Western 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BN2YyNDE5NzItMjAwNC00MGQxLTllNjktZGIzMWFkZjA3OWQ0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SY1000_CR0,0,699,1000_AL_.jpg></img>
+						<div class="movie-title">Chinatown (1974)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Drama, 
+															Mystery, 
+															Thriller 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BNzMyMjQ2OTEwOF5BMl5BanBnXkFtZTgwNzc2OTkwMDE@._V1_.jpg></img>
+						<div class="movie-title">Beverly Hills Cop (1984)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Comedy, 
+															Crime 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTkzODMwNDkzOF5BMl5BanBnXkFtZTgwNDA4NzA1ODE@._V1_SY1000_CR0,0,687,1000_AL_.jpg></img>
+						<div class="movie-title">The Invitation (2015)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Horror, 
+															Thriller 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BYzczOGRlMzQtNDAzMS00MjdlLTk5Y2QtNTM3MDE3NjRkYzQwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg></img>
+						<div class="movie-title">The Exorcist (1973)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Horror 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTQxNTIzMTExN15BMl5BanBnXkFtZTcwODI4MDgzNA@@._V1_SY1000_CR0,0,666,1000_AL_.jpg></img>
+						<div class="movie-title">From Russia With Love (1963)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Adventure, 
+															Thriller 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMjEyMzgwNTUzMl5BMl5BanBnXkFtZTcwNTMxMzM3Ng@@._V1_SY1000_CR0,0,772,1000_AL_.jpg></img>
+						<div class="movie-title">Lion King (1994)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Animation, 
+															Adventure, 
+															Drama 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTI4MDAwMDY3N15BMl5BanBnXkFtZTcwODIwMzMzMQ@@._V1._CR46,1,342,473_.jpg></img>
+						<div class="movie-title">Terminator 2: Judgment Day (1991)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Sci-fi 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTk1MDUzMTQ3OV5BMl5BanBnXkFtZTcwMDAwNTk0NA@@._V1_SY1000_CR0,0,666,1000_AL_.jpg></img>
+						<div class="movie-title">Robocop (1987)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Action, 
+															Crime, 
+															Sci-fi 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://ia.media-imdb.com/images/M/MV5BMTY1MTg1NDAxOV5BMl5BanBnXkFtZTcwMjg1MDI5Nw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg></img>
+						<div class="movie-title">Finding Nemo (2003)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Animation, 
+															Adventure, 
+															Comedy 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=http://d.gr-assets.com/books/1327868566l/2429135.jpg></img>
+						<div class="movie-title">The Girl with the Dragon Tattoo (2005)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Crime, 
+															Mystery, 
+															Thriller 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://i.kinja-img.com/gawker-media/image/upload/s---ohdLyWR--/17m13vh1sfoq3jpg.jpg></img>
+						<div class="movie-title">Roadside Picnic (1971)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Sci-fi, 
+															Fantasy 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1392015757l/1971304.jpg></img>
+						<div class="movie-title">City of Thieves (2008)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															History, 
+															War 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1403345411l/18144124.jpg></img>
+						<div class="movie-title">I Am Pilgrim (2013)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Mystery, 
+															Thriller, 
+															War 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1303252999l/968.jpg></img>
+						<div class="movie-title">The Da Vinci Code (2003)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															Crime, 
+															Mystery 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1433086293l/21.jpg></img>
+						<div class="movie-title">A Short History of Nearly Everything (2003)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Comedy, 
+															History, 
+															Science 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1433739086l/33313.jpg></img>
+						<div class="movie-title">Kitchen Confidential (2000)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Biography, 
+															Food &amp; drink, 
+															Memoir 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1348621563l/347610.jpg></img>
+						<div class="movie-title">King Leopold&#39;s Ghost (1998)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Biography, 
+															History, 
+															Politics 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1414608893l/2715.jpg></img>
+						<div class="movie-title">Salt Book (2002)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Food &amp; drink, 
+															History, 
+															Science 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1409498796l/22836957.jpg></img>
+						<div class="movie-title">The Revenant (2002)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															History, 
+															Thriller, 
+															Western 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1436732693l/13496.jpg></img>
+						<div class="movie-title">A Game of Thrones (1996)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															Dragons, 
+															Fantasy 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1327942880l/2493.jpg></img>
+						<div class="movie-title">The Time Machine (1895)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															Classics, 
+															Sci-fi 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1345271681l/33507.jpg></img>
+						<div class="movie-title">20,000 Leagues Under the Sea (1870)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Adventure, 
+															Classics, 
+															Sci-fi 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1164045516l/3590.jpg></img>
+						<div class="movie-title">The Adventures of Sherlock Holmes (1892)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Classics, 
+															Detective, 
+															Mystery 
+													</div>
+					</div>
+										<div class="movie-block">
+						<img src=https://d.gr-assets.com/books/1443231179l/12497.jpg></img>
+						<div class="movie-title">No Country For Old Men (2005)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+															Mystery, 
+															Thriller, 
+															Western 
+													</div>
+					</div>
+									</ul>
 			</div>
 		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTc0NDQzNTA2Ml5BMl5BanBnXkFtZTcwNzI2OTQzMw@@._V1_.jpg')">
-				<ul class="movie-title">The Other Guys (2010) <br /> Genres:  action  comedy  crime </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg')">
-				<ul class="movie-title">Jurassic Park (1993) <br /> Genres:  adventure  sci-fi  thriller </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BOTIyMDY2NGQtOGJjNi00OTk4LWFhMDgtYmE3M2NiYzM0YTVmXkEyXkFqcGdeQXVyNTU1NTcwOTk@._V1_SY1000_CR0,0,654,1000_AL_.jpg')">
-				<ul class="movie-title">Star Wars: A New Hope (1977) <br /> Genres:  action  adventure  fantasy </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTI2ODMzODA0Ml5BMl5BanBnXkFtZTYwNTM3NzY5._V1._CR17,27,308,447_.jpg')">
-				<ul class="movie-title">Predator (1987) <br /> Genres:  action  adventure  sci-fi </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTcyMzQ0MjQ5MF5BMl5BanBnXkFtZTYwOTczNjA5._V1_.jpg')">
-				<ul class="movie-title">Blazing Saddles (1974) <br /> Genres:  comedy  western </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BN2YyNDE5NzItMjAwNC00MGQxLTllNjktZGIzMWFkZjA3OWQ0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SY1000_CR0,0,699,1000_AL_.jpg')">
-				<ul class="movie-title">Chinatown (1974) <br /> Genres:  drama  mystery  thriller </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BNzMyMjQ2OTEwOF5BMl5BanBnXkFtZTgwNzc2OTkwMDE@._V1_.jpg')">
-				<ul class="movie-title">Beverly Hills Cop (1984) <br /> Genres:  action  comedy  crime </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTkzODMwNDkzOF5BMl5BanBnXkFtZTgwNDA4NzA1ODE@._V1_SY1000_CR0,0,687,1000_AL_.jpg')">
-				<ul class="movie-title">The Invitation (2015) <br /> Genres:  horror  thriller </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BYzczOGRlMzQtNDAzMS00MjdlLTk5Y2QtNTM3MDE3NjRkYzQwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg')">
-				<ul class="movie-title">The Exorcist (1973) <br /> Genres:  horror </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTQxNTIzMTExN15BMl5BanBnXkFtZTcwODI4MDgzNA@@._V1_SY1000_CR0,0,666,1000_AL_.jpg')">
-				<ul class="movie-title">From Russia With Love (1963) <br /> Genres:  action  adventure  thriller </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMjEyMzgwNTUzMl5BMl5BanBnXkFtZTcwNTMxMzM3Ng@@._V1_SY1000_CR0,0,772,1000_AL_.jpg')">
-				<ul class="movie-title">Lion King (1994) <br /> Genres:  animation  adventure  drama </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTI4MDAwMDY3N15BMl5BanBnXkFtZTcwODIwMzMzMQ@@._V1._CR46,1,342,473_.jpg')">
-				<ul class="movie-title">Terminator 2: Judgment Day (1991) <br /> Genres:  action  sci-fi </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTk1MDUzMTQ3OV5BMl5BanBnXkFtZTcwMDAwNTk0NA@@._V1_SY1000_CR0,0,666,1000_AL_.jpg')">
-				<ul class="movie-title">Robocop (1987) <br /> Genres:  action  crime  sci-fi </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://ia.media-imdb.com/images/M/MV5BMTY1MTg1NDAxOV5BMl5BanBnXkFtZTcwMjg1MDI5Nw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg')">
-				<ul class="movie-title">Finding Nemo (2003) <br /> Genres:  animation  adventure  comedy </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('http://d.gr-assets.com/books/1327868566l/2429135.jpg')">
-				<ul class="movie-title">The Girl with the Dragon Tattoo (2005) <br /> Genres:  crime  mystery  thriller </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s---ohdLyWR--/17m13vh1sfoq3jpg.jpg')">
-				<ul class="movie-title">Roadside Picnic (1971) <br /> Genres:  sci-fi  fantasy </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1392015757l/1971304.jpg')">
-				<ul class="movie-title">City of Thieves (2008) <br /> Genres:  adventure  history  war </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1403345411l/18144124.jpg')">
-				<ul class="movie-title">I Am Pilgrim (2013) <br /> Genres:  mystery  thriller  war </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1303252999l/968.jpg')">
-				<ul class="movie-title">The Da Vinci Code (2003) <br /> Genres:  adventure  crime  mystery </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1433086293l/21.jpg')">
-				<ul class="movie-title">A Short History of Nearly Everything (2003) <br /> Genres:  comedy  history  science </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1433739086l/33313.jpg')">
-				<ul class="movie-title">Kitchen Confidential (2000) <br /> Genres:  biography  food &amp; drink  memoir </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1348621563l/347610.jpg')">
-				<ul class="movie-title">King Leopold&#39;s Ghost (1998) <br /> Genres:  biography  history  politics </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1414608893l/2715.jpg')">
-				<ul class="movie-title">Salt Book (2002) <br /> Genres:  food &amp; drink  history  science </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1409498796l/22836957.jpg')">
-				<ul class="movie-title">The Revenant (2002) <br /> Genres:  history  thriller  western </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1436732693l/13496.jpg')">
-				<ul class="movie-title">A Game of Thrones (1996) <br /> Genres:  adventure  dragons  fantasy </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1327942880l/2493.jpg')">
-				<ul class="movie-title">The Time Machine (1895) <br /> Genres:  adventure  classics  sci-fi </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1345271681l/33507.jpg')">
-				<ul class="movie-title">20,000 Leagues Under the Sea (1870) <br /> Genres:  adventure  classics  sci-fi </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1164045516l/3590.jpg')">
-				<ul class="movie-title">The Adventures of Sherlock Holmes (1892) <br /> Genres:  classics  detective  mystery </ul>
-			</div>
-		</div>
-				<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('https://d.gr-assets.com/books/1443231179l/12497.jpg')">
-				<ul class="movie-title">No Country For Old Men (2005) <br /> Genres:  mystery  thriller  western </ul>
-			</div>
-		</div>
-			</div>
+	</div>
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/index.js"></script>

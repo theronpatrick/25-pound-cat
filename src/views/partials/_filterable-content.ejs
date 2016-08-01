@@ -34,12 +34,26 @@
 
 	
 	<div class="movie-container">
-		<% for (var i=0; i < movies.length; i++) {%>
-		<div class="movie-block">
-			<div class="movie-cover" style="background-image: url('<%= movies[i].poster %>')">
-				<ul class="movie-title"><%= movies[i].title %> (<%= movies[i].year %>) <br /> Genres: <% for (var j=0; j < movies[i].genre.length; j++){%> <%= movies[i].genre[j]%> <% } %></ul>
+		<div>
+			<!-- Went against the rules here and added/removed DOM elements, because I couldn't figure out how a ul
+			could be used without adding elements to it... -->
+			<div>
+				<ul>
+					<% for (var i=0; i < movies.length; i++) {%>
+					<div class="movie-block">
+						<img src=<%= movies[i].poster %>></img>
+						<div class="movie-title"><%= movies[i].title %> (<%= movies[i].year %>)</div>
+						<div>Genres: 
+							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
+							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
+							<% for (var j=0; j < movies[i].genre.length; j++){%>
+								<%= movies[i].genre[j].charAt(0).toUpperCase() + movies[i].genre[j].slice(1) %><%= (movies[i].genre.length - 1) == j ? "" : "," %> 
+							<% } %>
+						</div>
+					</div>
+					<% } %>
+				</ul>
 			</div>
 		</div>
-		<% } %>
 	</div>
 </section>
