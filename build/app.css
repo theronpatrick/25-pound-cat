@@ -91,11 +91,60 @@ section, div[data-section-type="testimonial"] {
     font-size: 2.4em; }
 
 #filterable-content {
-  color: #555555; }
+  color: #555555;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300; }
   #filterable-content .filter-container {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 21px;
     border: 1px solid #dedede; }
+  #filterable-content .filter-top-row {
+    height: 45px; }
+  #filterable-content .filter-dropdown {
+    position: relative;
+    float: left;
+    height: 45px;
+    width: 150px;
+    margin: 0 15px 0 0;
+    padding: 12px 20px;
+    color: #888888;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #f9f8f7;
+    border-bottom: 2px solid #dedede;
+    cursor: pointer; }
+    #filterable-content .filter-dropdown:after {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      content: url("img/down-carat.png"); }
+  #filterable-content .filter-search {
+    position: relative;
+    float: right; }
+    #filterable-content .filter-search input {
+      height: 35px;
+      width: 225px;
+      padding: 5px;
+      border: 1px solid #dedede; }
+    #filterable-content .filter-search:after {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      content: url("img/magnifying.png"); }
+  #filterable-content .filter-bottom-row {
+    height: 45px;
+    padding: 10px 0px; }
+  #filterable-content .filter-poster-type {
+    float: left;
+    margin-right: 16px;
+    font-size: 1.8em; }
+    #filterable-content .filter-poster-type input, #filterable-content .filter-poster-type label {
+      margin: 0;
+      vertical-align: middle; }
+  #filterable-content .clear-filters-button {
+    float: right;
+    font-size: 1.8em; }
   #filterable-content .movie-container {
     max-width: 1024px;
     margin: 0 auto;
