@@ -29,7 +29,7 @@ section, div[data-section-type="testimonial"] {
     height: 100%;
     padding: 40px 20px;
     text-align: center; }
-    @media (max-width: 415px) {
+    @media (max-width: 630px) {
       #testimonial div {
         padding: 10px 5px; } }
   #testimonial p, #testimonial span {
@@ -37,7 +37,7 @@ section, div[data-section-type="testimonial"] {
     vertical-align: top;
     width: 50%;
     text-align: left; }
-    @media (max-width: 415px) {
+    @media (max-width: 630px) {
       #testimonial p, #testimonial span {
         width: 70%; } }
   #testimonial p:before {
@@ -45,7 +45,7 @@ section, div[data-section-type="testimonial"] {
     top: 26px;
     margin-left: -40px;
     content: url("img/testimonial-flair.png"); }
-    @media (max-width: 415px) {
+    @media (max-width: 630px) {
       #testimonial p:before {
         margin: 0;
         left: 10px; } }
@@ -130,7 +130,7 @@ section, div[data-section-type="testimonial"] {
     margin: 45px 0px 0px 0px; }
     #filterable-content .dropdown-menu[data-dropdown-type='year'] {
       margin: 45px 0px 0px 165px; }
-    @media (max-width: 415px) {
+    @media (max-width: 630px) {
       #filterable-content .dropdown-menu {
         margin: 0 !important; } }
     #filterable-content .dropdown-menu ul {
@@ -155,7 +155,7 @@ section, div[data-section-type="testimonial"] {
       width: 225px;
       padding: 5px;
       border: 1px solid #dedede; }
-      @media (max-width: 415px) {
+      @media (max-width: 630px) {
         #filterable-content .filter.search input {
           width: 100%; } }
     #filterable-content .filter.search:after {
@@ -180,7 +180,7 @@ section, div[data-section-type="testimonial"] {
     text-decoration: underline;
     text-transform: uppercase;
     cursor: pointer; }
-  @media (max-width: 415px) {
+  @media (max-width: 630px) {
     #filterable-content .filter {
       float: none !important;
       display: block;

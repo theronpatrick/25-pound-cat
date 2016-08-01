@@ -9,7 +9,6 @@ $darker-gray: #888888;
 $blue: #47ace4;
 
 // Fonts
-// TODO: Put in own file if needed
 @mixin robotoFont() {
 	font-family: "Roboto Slab", sans-serif;
 	font-weight: 300;
@@ -29,6 +28,6 @@ $blue: #47ace4;
 
 @mixin breakpoint($point) {
    @if $point == mobile {
-     @media (max-width: 415px) { @content ; }
+     @media (max-width: 630px) { @content ; }
   }
 }

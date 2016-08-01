@@ -1,13 +1,8 @@
 // TODO: Remove unneeded requirements
 var gulp = require('gulp');
-var browserify = require('browserify');
-var babelify = require('babelify');
-var uglify = require('gulp-uglify');
 var del = require('del');
 var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
-var cssnano = require('gulp-cssnano');
-var concat = require('gulp-concat');
 var ejs = require('gulp-ejs');
 
 var webserver = require('gulp-webserver');
@@ -41,7 +36,7 @@ gulp.task('clean:sass', function() {
 	return del('src/styles/app.css');
 });
 
-// TODO: Minify js if needed
+// Could minify js here if we really wanted to
 gulp.task('js', function() {
 	return gulp.src("src/js/**/*")
 	.pipe(gulp.dest("build/js/"));
@@ -53,7 +48,6 @@ gulp.task('img', function() {
 	.pipe(gulp.dest("build/img/"));
 });
 
-// TODO: Get EJS to live reload
 gulp.task('ejs', function() {
 
 	gutil.log('Building ejs files');
