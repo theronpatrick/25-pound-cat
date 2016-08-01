@@ -2,11 +2,12 @@ $(document).ready(function() {
 
 	function init() {
 		initCta();
+		initFilters();
 	}
 
 	// Load some pokemon into CTA
 	function initCta() {
-		var ctaSection = $("[data-section-type='cta']");
+		var ctaSection = $("#cta");
 		var ctaButton = ctaSection.find("a");
 
 		var firstClick = true;
@@ -67,6 +68,119 @@ $(document).ready(function() {
 
 		return promise;
 
+	}
+
+	// Filter functions
+	function initFilters() {
+		// Load movie data and filter out genres
+		loadData()
+		.then(function(response) {
+			var genres = getGenres(response);
+			buildGenreFilter(genres);
+
+
+			attachFilterHandlers();
+			attachGlobalHandlers();
+		})
+	}
+
+	function loadData() {
+		return $.get("js/data/data.json");
+	}
+
+	function getGenres(data) {
+		var genres = {};
+		// Loop over each data item and add to hash
+		$.each(data.media, function(key, value) {
+			$.each(value.genre, function(key, value) {
+				genres[value] = true;
+			})
+		})
+
+		// Turn genre into array and sort
+		var genreArray = [];
+		$.each(genres, function(key, value) {
+			genreArray.push(key)
+		})
+
+		genreArray.sort();
+
+		return genreArray;
+
+	}
+
+	function buildGenreFilter(genres) {
+		// Not wild about building DOM elements in JS like this.  
+		// In a real project would probably use separate partial templates.
+		var genreDropdown = $("<div class='dropdown-menu' aria-hidden='true' data-dropdown-type='genre'><ul></ul></div>");
+		$.each(genres, function(key, value) {
+			genreDropdown.find("ul").append($("<li role='button' aria-pressed='false' class='dropdown-button'>" + capitalizeFirstLetter(value) + "</li>"));
+		})
+
+		$("[data-filter-type='genre']").after(genreDropdown);
+	}
+
+	function attachFilterHandlers() {
+		$("[data-filter-type='genre']").click(function() {
+			toggleDropdown($("[data-dropdown-type='genre']"));
+		})
+
+		$("[data-dropdown-type='genre']").find("li").click(function() {
+			toggleFilter($(this));
+			filterGenres();
+		})
+	}
+
+	function attachGlobalHandlers() {
+		$("body").click(function(e) {
+			var target = $(e.target);
+			if (!target.hasClass("dropdown-button") && !target.hasClass("filter dropdown")) {
+				hideDropdowns();
+			}
+		})
+	}
+
+	function toggleDropdown(target) {
+		if (target.attr("aria-hidden") === "true") {
+			target.attr("aria-hidden", "false");
+		} else {
+			target.attr("aria-hidden", "true");
+		}
+	}
+
+	function hideDropdowns() {
+		$(".dropdown-menu").attr("aria-hidden" , "true");
+	}
+
+	function toggleFilter(target) {
+		if (target.attr("aria-pressed") === "true") {
+			target.attr("aria-pressed", "false");
+		} else {
+			target.attr("aria-pressed", "true");
+		}
+	}
+	
+	function filterGenres() {
+		// Get all current filters, then hide all movie blocks, and turn back ones that have selected genres
+		var currentFilters = $("[data-dropdown-type='genre']").find("li[aria-pressed='true']");
+
+		// If no filters are selected, clear filters and return
+		if (currentFilters.length < 1) {
+			clearFilters();
+			return;
+		}
+
+		$(".movie-block").attr("aria-hidden", "true");
+
+		$.each(currentFilters, function(key, value) {
+			var selector = ".movie-genres:contains('" + $(value).text() + "')";
+			$(selector).parent().attr("aria-hidden", false);
+		})
+
+	}
+
+	function clearFilters() {
+		$(".movie-block").attr("aria-hidden", "false");
 	}
 
 	// Helper functions

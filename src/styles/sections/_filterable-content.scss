@@ -44,6 +44,41 @@
 
 	}
 
+	.dropdown-menu {
+		position: absolute;
+		width: 150px;
+
+		background-color: $light-gray;
+
+		margin-top: 45px;
+
+		ul {
+			list-style-type: none;
+
+			li {
+				position: relative;
+
+				padding: 5px;
+				height: 32px;
+				&:nth-child(2n + 2) { 
+		   	 		background-color: $white;
+		   	 	}
+
+		   	 	&[aria-pressed='true'] {
+
+		   	 		&:after {
+						position: absolute;
+						right: 15px;
+						top: 10px;
+						content: url("img/check.png");
+					}
+		   	 	}
+
+		   	 	cursor: pointer;
+			}
+		}
+	}
+
 	.filter.search {
 		position: relative;
 		float: right;
@@ -107,16 +142,16 @@
 		max-width: 1024px;
 
 		margin: 0 auto;
-		padding: 21px;
+		padding: 21px 26px;
 
-		text-align: center;
+		text-align: left;
 
 		border: 1px solid $dark-gray;
 	}
 
 	.movie-block {
 		width: 305px;
-		height: 545px;
+		min-height: 545px;
 
 		@include inlineBlock;
 

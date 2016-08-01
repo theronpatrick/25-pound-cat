@@ -17,6 +17,9 @@ body {
 p, span {
   font-size: 1.8em; }
 
+[aria-hidden='true'] {
+  display: none !important; }
+
 section, div[data-section-type="testimonial"] {
   min-height: 300px; }
 
@@ -119,6 +122,25 @@ section, div[data-section-type="testimonial"] {
       right: 15px;
       top: 10px;
       content: url("img/down-carat.png"); }
+  #filterable-content .dropdown-menu {
+    position: absolute;
+    width: 150px;
+    background-color: #f9f8f7;
+    margin-top: 45px; }
+    #filterable-content .dropdown-menu ul {
+      list-style-type: none; }
+      #filterable-content .dropdown-menu ul li {
+        position: relative;
+        padding: 5px;
+        height: 32px;
+        cursor: pointer; }
+        #filterable-content .dropdown-menu ul li:nth-child(2n + 2) {
+          background-color: #ffffff; }
+        #filterable-content .dropdown-menu ul li[aria-pressed='true']:after {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          content: url("img/check.png"); }
   #filterable-content .filter.search {
     position: relative;
     float: right; }
@@ -155,12 +177,12 @@ section, div[data-section-type="testimonial"] {
   #filterable-content .movie-container {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 21px;
-    text-align: center;
+    padding: 21px 26px;
+    text-align: left;
     border: 1px solid #dedede; }
   #filterable-content .movie-block {
     width: 305px;
-    height: 545px;
+    min-height: 545px;
     display: inline-block;
     vertical-align: top;
     text-align: left;

@@ -19,6 +19,9 @@ body {
 p, span {
 	font-size: 1.8em;
 }
+[aria-hidden='true'] {
+	display: none !important;
+}
 
 // Basic structure blocks.  Need special div selector for testimonial since it's not
 // in a section
