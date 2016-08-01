@@ -13,10 +13,10 @@
 	}
 
 	.filter-top-row {
-		height: 45px;
+		min-height: 45px;
 	}
 
-	.filter-dropdown {
+	.filter.dropdown {
 		position: relative;
 		float: left;
 
@@ -44,7 +44,7 @@
 
 	}
 
-	.filter-search {
+	.filter.search {
 		position: relative;
 		float: right;
 
@@ -55,6 +55,10 @@
 			padding: 5px;
 
 			border: 1px solid $dark-gray;
+
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
 		}
 
 		&:after {
@@ -67,11 +71,11 @@
 	}
 
 	.filter-bottom-row {
-		height: 45px;
+		min-height: 45px;
 		padding: 10px 0px;
 	}
 
-	.filter-poster-type {
+	.filter.poster-type {
 		float: left;
 
 		margin-right: 16px;
@@ -84,9 +88,17 @@
 
 	} 
 
-	.clear-filters-button {
+	.filter.clear-button {
 		float: right;
 		font-size: 1.8em;
+	}
+
+	// Mobile styles, make all floating filters block elements
+	.filter {
+		@include breakpoint(mobile) {
+			float: none !important;
+			display: block;
+		}
 	}
 
 	// Movie block
