@@ -47,7 +47,7 @@
 							<!-- Not a huge fan of logic embedded in templates like this because it gets messy.  This is 
 							basically looping over genres, capitalizing the first letter of each, then joining by commas -->
 							<% for (var j=0; j < movies[i].genre.length; j++){%>
-								<%= movies[i].genre[j].charAt(0).toUpperCase() + movies[i].genre[j].slice(1) %><%= (movies[i].genre.length - 1) == j ? "" : "," %> 
+								<%= movies[i].genre[j].charAt(0).toUpperCase() + movies[i].genre[j].slice(1) %><%= (movies[i].genre.length - 1) == j ? "" : ", " %> 
 							<% } %>
 						</div>
 					</div>

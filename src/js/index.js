@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 		var firstClick = true;
 
+		// Allow button press by focusing and hitting enter
 		ctaButton.keydown(function(event) {
 			if (event.keyCode == 13) {
 				ctaButton.trigger('click');
@@ -52,7 +53,11 @@ $(document).ready(function() {
 
 						catchEmAll();
 					}
-				});
+				})
+				.fail(function() {
+					alert("Looks like Team Rocket took down the pokemon API :(");
+					button.text("Catch more!");
+				})
 			}
 
 			catchEmAll();
@@ -106,6 +111,7 @@ $(document).ready(function() {
 			genreArray.push(key)
 		})
 		genreArray.sort();
+
 		var yearArray = [];
 		$.each(years, function(key, value) {
 			yearArray.push(key)
@@ -163,12 +169,11 @@ $(document).ready(function() {
 			applyFilters();
 		})
 
-
-
 		$(".clear-button").click(clearFilters);
 	}
 
 	function attachGlobalHandlers() {
+		// Hide open menus if clicking outside a dropdown
 		$("body").click(function(e) {
 			var target = $(e.target);
 			if (!target.hasClass("dropdown-button") && !target.hasClass("filter dropdown")) {
@@ -198,7 +203,7 @@ $(document).ready(function() {
 	}
 	
 	function applyFilters() {
-		// Get all current filters, then hide all movie blocks, and turn back ones that have selected genres
+		// Get all current filters, then loop over media blocks and hide/show them
 		var currentGenreFilters = $("[data-dropdown-type='genre']").find("li[aria-pressed='true']");
 		var currentGenreFilterArray = [];
 		$.each(currentGenreFilters, function(key, value) {
@@ -215,12 +220,14 @@ $(document).ready(function() {
 		var mediaType = $("[name='poster-type']:checked").val();
 
 		$.each($(".movie-block"), function(key, value) {
-			toggleMovieBasedOnFilters($(this), currentGenreFilterArray, currentYearFilterArray, searchText, mediaType);
+			toggleMediaBasedOnFilters($(this), currentGenreFilterArray, currentYearFilterArray, searchText, mediaType);
 		})
 
 	}
 
-	function toggleMovieBasedOnFilters(block, genres, years, searchText, mediaType) {
+	function toggleMediaBasedOnFilters(block, genres, years, searchText, mediaType) {
+		// For each check, if a param is not sent in (or is empty) that means nothing is checked,
+		// which is the default case and should be treated as if everything is checked
 		var genreCheck = false;
 		if (genres.length < 1) {
 			genreCheck = true;

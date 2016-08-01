@@ -23,7 +23,8 @@
 		}
 	}
 	p {
-		// Only resorting to CSS selector because I'm not supposed to add a <img> tag to source file
+		// Would normally insert an <img> tag instead of using this selector,
+		// but this avoids adding any DOM elements to the source file
 		&:before {
 			position: absolute;
 			top: 26px;
