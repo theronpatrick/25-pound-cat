@@ -1,4 +1,4 @@
-[data-section-type="cta"] {
+#cta {
 	background-color: $dark-green;
 	color: $white;
 
@@ -29,13 +29,12 @@
 		display: inline-block;
 		vertical-align: middle;
 
-		font-size: 1.2em;
+		font-size: 1.4em;
 
 	}
 
 	a {
-		// Would be preferable to add a class for this one if that was allowed
-		&:not(.poke-image) {
+		&.tell-more-button {
 			background-color: $light-blue;
 			@include montserratFont();
 			font-size: 1.8em;

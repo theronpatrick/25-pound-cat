@@ -1,5 +1,5 @@
-<section data-section-type="filterable-content">
-	<div data-attribute="filter-container">
+<section id="filterable-content">
+	<div class="filter-container">
 		<div>
 			<div>
 				<div>
@@ -33,11 +33,11 @@
 	</div>
 
 	
-	<div data-attribute="movie-container">
+	<div class="movie-container">
 		<% for (var i=0; i < movies.length; i++) {%>
-		<div data-attribute="movie-block">
-			<div data-attribute="movie-cover" style="background-image: url('<%= movies[i].poster %>')">
-				<ul data-attribute="movie-title"><%= movies[i].title %> (<%= movies[i].year %>) <br /> Genres: <% for (var j=0; j < movies[i].genre.length; j++){%> <%= movies[i].genre[j]%> <% } %></ul>
+		<div class="movie-block">
+			<div class="movie-cover" style="background-image: url('<%= movies[i].poster %>')">
+				<ul class="movie-title"><%= movies[i].title %> (<%= movies[i].year %>) <br /> Genres: <% for (var j=0; j < movies[i].genre.length; j++){%> <%= movies[i].genre[j]%> <% } %></ul>
 			</div>
 		</div>
 		<% } %>

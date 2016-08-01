@@ -20,47 +20,47 @@ p, span {
 section, div[data-section-type="testimonial"] {
   min-height: 300px; }
 
-[data-section-type="testimonial"] {
+#testimonial {
   background-color: #f9f8f7; }
-  [data-section-type="testimonial"] div {
+  #testimonial div {
     height: 100%;
     padding: 40px 20px;
     text-align: center; }
     @media (max-width: 415px) {
-      [data-section-type="testimonial"] div {
+      #testimonial div {
         padding: 10px 5px; } }
-  [data-section-type="testimonial"] p, [data-section-type="testimonial"] span {
+  #testimonial p, #testimonial span {
     display: inline-block;
     vertical-align: top;
     width: 50%;
     text-align: left; }
     @media (max-width: 415px) {
-      [data-section-type="testimonial"] p, [data-section-type="testimonial"] span {
+      #testimonial p, #testimonial span {
         width: 70%; } }
-  [data-section-type="testimonial"] p:before {
+  #testimonial p:before {
     position: absolute;
     top: 26px;
     margin-left: -40px;
     content: url("img/testimonial-flair.png"); }
     @media (max-width: 415px) {
-      [data-section-type="testimonial"] p:before {
+      #testimonial p:before {
         margin: 0;
         left: 10px; } }
-  [data-section-type="testimonial"] span {
+  #testimonial span {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 1.4em; }
 
-[data-section-type="cta"] {
+#cta {
   background-color: #0f434c;
   color: #ffffff;
   text-align: center; }
-  [data-section-type="cta"] div {
+  #cta div {
     height: 100%;
     width: 100%;
     display: inline-block;
     vertical-align: top; }
-  [data-section-type="cta"] p {
+  #cta p {
     margin: 0;
     min-height: 300px;
     height: 100%;
@@ -70,8 +70,8 @@ section, div[data-section-type="testimonial"] {
     text-align: left;
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.2em; }
-  [data-section-type="cta"] a:not(.poke-image) {
+    font-size: 1.4em; }
+  #cta a.tell-more-button {
     background-color: #1da1db;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -86,37 +86,37 @@ section, div[data-section-type="testimonial"] {
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer; }
-  [data-section-type="cta"] a.poke-image {
+  #cta a.poke-image {
     color: #ffffff;
     font-size: 2.4em; }
 
-[data-section-type="filterable-content"] {
+#filterable-content {
   color: #555555; }
-  [data-section-type="filterable-content"] [data-attribute="filter-container"] {
+  #filterable-content .filter-container {
     max-width: 1024px;
     margin: 0 auto;
     border: 1px solid #dedede; }
-  [data-section-type="filterable-content"] [data-attribute="movie-container"] {
+  #filterable-content .movie-container {
     max-width: 1024px;
     margin: 0 auto;
     padding: 21px;
     text-align: center;
     border: 1px solid #dedede; }
-  [data-section-type="filterable-content"] [data-attribute="movie-block"] {
+  #filterable-content .movie-block {
     width: 305px;
     height: 545px;
     display: inline-block;
     vertical-align: top;
     margin-right: 20px; }
-    [data-section-type="filterable-content"] [data-attribute="movie-block"]:nth-child(3n+3) {
+    #filterable-content .movie-block:nth-child(3n+3) {
       margin-right: 0px; }
-  [data-section-type="filterable-content"] [data-attribute="movie-cover"] {
+  #filterable-content .movie-cover {
     width: 100%;
     height: 445px;
     background-size: contain;
     background-repeat: no-repeat;
     position: relative; }
-  [data-section-type="filterable-content"] ul {
+  #filterable-content ul {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 1.8em;
