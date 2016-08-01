@@ -18,43 +18,60 @@ p, span {
   font-size: 1.8em; }
 
 section, div[data-section-type="testimonial"] {
-  height: 300px; }
+  min-height: 300px; }
 
-div[data-section-type="testimonial"] {
+[data-section-type="testimonial"] {
   background-color: #f9f8f7; }
-  div[data-section-type="testimonial"] div {
+  [data-section-type="testimonial"] div {
     height: 100%;
     padding: 40px 20px;
     text-align: center; }
-  div[data-section-type="testimonial"] p, div[data-section-type="testimonial"] span {
+    @media (max-width: 415px) {
+      [data-section-type="testimonial"] div {
+        padding: 10px 5px; } }
+  [data-section-type="testimonial"] p, [data-section-type="testimonial"] span {
     display: inline-block;
     vertical-align: top;
     width: 50%;
     text-align: left; }
-  div[data-section-type="testimonial"] p:before {
+    @media (max-width: 415px) {
+      [data-section-type="testimonial"] p, [data-section-type="testimonial"] span {
+        width: 70%; } }
+  [data-section-type="testimonial"] p:before {
     position: absolute;
     top: 26px;
     margin-left: -40px;
     content: url("img/testimonial-flair.png"); }
-  div[data-section-type="testimonial"] span {
+    @media (max-width: 415px) {
+      [data-section-type="testimonial"] p:before {
+        margin: 0;
+        left: 10px; } }
+  [data-section-type="testimonial"] span {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 1.4em; }
 
-section[data-section-type="cta"] {
+[data-section-type="cta"] {
   background-color: #0f434c;
-  color: #ffffff; }
-  section[data-section-type="cta"] div {
+  color: #ffffff;
+  text-align: center; }
+  [data-section-type="cta"] div {
     height: 100%;
-    padding: 0px 200px; }
-  section[data-section-type="cta"] p {
-    margin: 0;
+    width: 100%;
     display: inline-block;
-    vertical-align: top;
-    font-size: 1.2em;
+    vertical-align: top; }
+  [data-section-type="cta"] p {
+    margin: 0;
+    min-height: 300px;
+    height: 100%;
+    max-width: 1024px;
+    width: 70%;
     padding: 47px 0px;
-    width: 645px; }
-  section[data-section-type="cta"] a {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2em; }
+  [data-section-type="cta"] a:not(.poke-image) {
     background-color: #1da1db;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -64,9 +81,46 @@ section[data-section-type="cta"] {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    margin-left: 30px;
-    margin-top: 110px;
+    margin: 20px 0px 20px 30px;
     padding: 20px 0px;
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer; }
+  [data-section-type="cta"] a.poke-image {
+    color: #ffffff;
+    font-size: 2.4em; }
+
+[data-section-type="filterable-content"] {
+  color: #555555; }
+  [data-section-type="filterable-content"] [data-attribute="filter-container"] {
+    max-width: 1024px;
+    margin: 0 auto;
+    border: 1px solid #dedede; }
+  [data-section-type="filterable-content"] [data-attribute="movie-container"] {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 21px;
+    text-align: center;
+    border: 1px solid #dedede; }
+  [data-section-type="filterable-content"] [data-attribute="movie-block"] {
+    width: 305px;
+    height: 545px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px; }
+    [data-section-type="filterable-content"] [data-attribute="movie-block"]:nth-child(3n+3) {
+      margin-right: 0px; }
+  [data-section-type="filterable-content"] [data-attribute="movie-cover"] {
+    width: 100%;
+    height: 445px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative; }
+  [data-section-type="filterable-content"] ul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.8em;
+    position: absolute;
+    bottom: -60px;
+    padding: 0;
+    margin: 0; }

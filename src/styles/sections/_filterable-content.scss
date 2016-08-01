@@ -2,11 +2,35 @@
 
 	color: $gray;
 
+	[data-attribute="filter-container"] {
+		max-width: 1024px;
+
+		margin: 0 auto;
+
+		border: 1px solid $lighter-gray;
+	}
+
+	[data-attribute="movie-container"] {
+		max-width: 1024px;
+
+		margin: 0 auto;
+		padding: 21px;
+
+		text-align: center;
+
+		border: 1px solid $lighter-gray;
+	}
+
 	[data-attribute="movie-block"] {
 		width: 305px;
 		height: 545px;
 
 		@include inlineBlock;
+
+		margin-right: 20px;
+   	 	&:nth-child(3n+3) { 
+   	 		margin-right: 0px;  
+   	 	}
 	}
 
 	[data-attribute="movie-cover"] {
